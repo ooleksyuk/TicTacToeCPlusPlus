@@ -42,6 +42,8 @@ void playGame(){
   printUsersInformation(user1);
   printUsersInformation(user2);
   
+  cout << "============== START GAME ==============" << endl;
+  
   Gameboard gameBoard;
   
   int x, y;
@@ -66,11 +68,12 @@ void playGame(){
       return;
       }
     }
-  cout << "Game over." << endl;
+  cout << "============== GAME OVER ==============" << endl;
 }
 
 void getXandY(int &x, int &y, User user, Gameboard gameBoard)
 {
+  gameBoard.printInfo();
   cout << user.getName() << " Enter your position: " << endl;
   int result = 0;
   while(!result)
@@ -130,14 +133,14 @@ int promptUsersMove(char step)
 {
   int value;
   cin.clear();
-  cout << "Enter your position " << step << endl;
+  cout << step << " = ";
   cin >> value;
   
   while(value > 3 or value < 0 or !cin)
     {
     cin.clear();
     std::cout<<"That is not a valid position" << endl;
-    cout << "Enter your position " << step << endl;
+    cout << step << " = ";
     cin >> value;
     }
   

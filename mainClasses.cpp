@@ -201,12 +201,15 @@ int Gameboard::checkSpace(int x, int y)
 
 void Gameboard::printInfo()
 {
-  //cout << std::setw(5) <<endl;
+  cout << std::setw(2) << "*" << std::setw(2) << 0 << std::setw(2) << 1;
+  cout << std::setw(2) << 2 << std::setw(2) << 3 << std::setw(2);
   for(int i=0;i<4; i++)
     {
+    cout << std::setw(2) << endl;
+    cout << i << std::setw(2);
     for(int j=0;j<4; j++)
       {
-      cout << gameSpace[j][i];
+      cout << gameSpace[j][i] << std::setw(2);
       }
     cout << endl;
     }
