@@ -9,18 +9,24 @@ You'll be promted to enter names for two players.
 The game is using two coordinates for making a move `(x, y)`.
 
 The Gameboard looks like this:
- |0|1|2|3_____x
-0|_|_|_|_
-1|_|_|_|_
-2|_|_|_|_
-3|_|_|_|_
- |
-y
+
+|  `x,y` | 0 | 1 | 2 | 3 |
+| ------ | - | - | - | - |
+|    0   | - | - | - | - |
+|    1   | - | - | - | - |
+|    2   | - | - | - | - |
+|    3   | - | - | - | - |
+
 
 First you'll be prompted to enter `x`, than `y`.
 
-By entering x = 0, y = 2 you'll get:
-_|0|1|2|3
-0|_|_|x|_
+By entering for `x` `x = 0, y = 2` and for `o` `x = 1, y = 3` you'll get:
+
+|  `x,y` | 0 | 1 | 2 | 3 |
+| ------ | - | - | - | - |
+|    0   | - | - | - | - |
+|    1   | - | - | - | - |
+|    2   | `x` | - | - | - |
+|    3   | - | `o` | - | - |
 
 I am working to improve the game by outputting layout of the game board before each move. TBD.
